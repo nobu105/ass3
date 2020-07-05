@@ -16,16 +16,34 @@
  @import "bootstrap-sprockets";  /*ここを追加*/
  @import "bootstrap";
 
- * {
+ *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-a {
+ }
+ a{
   text-decoration: none;
-}
+ }
 .clearfix::after {
   content: "";
   display: block;
   clear: both;
+ }
+
+.title {
+	font-size: 75px;
+}
+
+footer {
+    white-space: nowrap;
+    text-align: right;
+    margin-right:100px;
+    font-size: 15px;
+}
+
+.login {
+	margin: 25px 80px;
+}
+.signup {
+	margin: 25px 80px;
 }
