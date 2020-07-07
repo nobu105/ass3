@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
-  root 'top#index'
-  devise_for :users
+  root "books#top"
+  get "home/about" => "books#about"
+  devise_for :users, controllers: {
+        sessions:      'users/sessions',
+        registrations: 'users/registrations'
+    }
+
+  resources :books
   resources :users
-  root 'post_image#index'
+
+
+    # see http://guides.rubyonrails.org/routing.html
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
